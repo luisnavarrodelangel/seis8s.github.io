@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Seis8s</title>
+      <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/1c9491c3-d804-48fe-9d1e-06e2c4f58528/seis8sTitulo.ico?v=1720029681684">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" /> 
+<!--     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kode Mono"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chicle"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Condiment"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Galada"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent Marker"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hanalei Fill"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fascinate"/>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/peggy"></script> 
+    <script src="https://unpkg.com/tone"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tonal/browser/tonal.min.js"></script>
+
+    <script type="module" src="armonia.js"></script>
+    <script type="module" src="instrumento.js"></script>    
+    <script type="module" src="parser.mjs"></script>
+    
+
+
+
+  </head>
+  
+<body>
+
+  <div id="app">    
+    
+<svg viewBox="0 0 1368 668" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  >
+<g id="contenedorPrincipal" clip-path="url(#clip0_1_2)">
+<rect width="1368" height="668" fill="url(#paint0_linear_1_2)"/>
+<g id="panelesYconsola">
+  
+<!-- Panel Izquierdo   -->
+<g id="panelIzquierdo">
+  
+<!--Barra horizontal Panel Izquierdo    -->
+<g id="barraHorizontalPanelIzquierdo">
+<!-- Titulos Panel Izquierdo   -->
+<g id="titulosPanelIzquierdo" >
+<rect id="barraHorizontalMTituloenuIzquierdo" x="-0.432373" y="136.553" width="341.827" height="62.9114" rx="4.5" stroke="black"/>
+<text id="saludos" v-show="mostrarTituloPanelIzquierdo" fill="#FAFF00" xml:space="preserve" style="white-space: pre" font-family="Permanent Marker" font-size="32" letter-spacing="0em"><tspan x="110.643" y="181.291">{{tituloPanelIzquierdo}}</tspan></text>
+</g>
+</g>
+</g>
+  
+  
+<!-- menu panel izquierdo   -->
+<g id="menuPanelIzquierdo">
+<g id="opcionesMenuPanelIzquierdo" v-show="mostrarOpcionesMenuPanelIzquierdo" >
+
+<!-- Info button   -->
+<g id="acercaDeButton" @click="mostrarOpcionAcercaDe">
+  <foreignObject x="75" y="145.834" width="50" height="50"> 
+  <span class="material-symbols-outlined iconos" style="font-size: 3em" font-family="Permanent Marker">info</span>
+  </foreignObject>
+</g>
+  
+<!--  tutoriales  button  -->
+<g id="tutorialesButton" @click="mostrarOpcionTutoriales">
+  <foreignObject x="130" y="145.834" width="50" height="50"> 
+  <span class="material-symbols-outlined iconos" style="font-size: 3em" font-family="Permanent Marker">help</span>
+  </foreignObject>
+</g>
+  
+<!-- Saludos panel button   -->
+  
+<g id="saludosPanelbutton" @click="mostrarOpcionSaludos">
+  <foreignObject x="185" y="145.834" width="50" height="50"> 
+  <span class="material-symbols-outlined iconos" style="font-size: 3em" font-family="Permanent Marker">waving_hand</span>
+  </foreignObject>
+</g>
+
+  
+<!-- MIDI Button   -->
+<g id="midi" @click="mostrarOpcionMidi">
+ <foreignObject x="240" y="145.834" width="50" height="50"> 
+   <span class="material-symbols-outlined iconos" style="font-size: 3em" font-family="Permanent Marker">piano</span>
+ </foreignObject>
+</g>
+  
+  
+
+</g>
+<g id="abrirMenuIzquierdo" @click="abrirMenuIzquierdo()" fill="transparent">
+<rect x="0.5" y="136.5" width="63" height="63" rx="4.5" stroke="black"/>
+<text id="- - -" transform="translate(5.10095 140.145)" fill="#FAFF00" xml:space="preserve" style="white-space: pre" font-family="Permanent Marker" font-size="40" letter-spacing="0em"><tspan x="14.7115" y="33.6944">-&#10;</tspan><tspan x="14.7115" y="43.6944">-&#10;</tspan><tspan x="14.7115" y="53.6944">-</tspan></text>
+</g>
+</g>
+</g>
+
+<!-- Contenedor Acerca De   -->
+  <g id="contenedorAcercaDe" v-show="mostrarAcercaDeContenedor">
+    <foreignObject class="textoAcercaDe" x="-0.432373" y="199.5" width="342.932" height="469">
+    <p>
+      Seis8s es un lenguaje informático basado en la web que permite la interacción en tiempo real con audio digital y conocimientos musicales localizados. <br>Seis8s gira en torno a comandos que se relacionan con la música latina bailable, también conocida como música latina urbana o música popular latina. Si deseas saber más, agregate al canal de Discord de Seis8s:
+<a href="https://discord.gg/ygEPS8tzzz" target="_blank">https://discord.gg/ygEPS8tzzz</a>
+</p>    
+  </foreignObject>
+  </g>
+  
+   <!-- Tutoriales   -->
+  <g id="contenedorTutoriales" v-show="mostrarTutorialesContenedor">
+    <foreignObject class="textoAcercaDe" x="-0.432373" y="199.5" width="342.932" height="469">
+    
+       <h2>¿Cómo usar Seis8s?</h2>
+      
+<ol>
+  
+  <li>Haz click sobre el editor de texto a la derecha, luego presiona las teclas Shift + Enter para tocar el código de ejemplo que aparece en el editor. Presiona Control + . o Command + . para detenerlo.</li>
+<!--   <li>Explora más ejemplos presionando ⓔ y después presionando ▸ para tocar cada ejemplo.</li> -->
+  <li>Aprende cómo modificar los ejemplos o crear un nuevo código consultando la sección de Tutoriales en el menú de arriba.</li>
+</ol>
+      
+      
+      <p>Próximamente habrá un curso sobre Cumbia Algorítmica por parte de "Cursos Luis"
+      </p>
+  </foreignObject>
+  </g>
+  
+  
+  <!-- Contenedor MIDI   -->
+  <g id="contenedorMidi" v-show="mostrarConexionesMidiContenedor">
+    <foreignObject class="textoAcercaDe" x="-0.432373" y="199.5" width="342.932" height="469">
+    <p>
+     Próximamente! 
+      </p>
+  </foreignObject>
+  </g>
+  
+  
+  <!-- Contenedor de saludos   -->
+<g id="contenedorSaludos"  v-show="mostrarSaludosContenedor">
+<rect id="panelIzquierdo_2" x="-0.432373" y="199.5" width="342.932" height="469" rx="5.5" stroke="black"/>
+
+  
+<!-- Panel de saludos 1  -->
+  
+
+<g id="panelSaludos">
+<path id="saludoTextBox" d="M35.437 223.914H298.296C298.296 223.914 313.284 227.251 319.617 235.073C325.95 242.896 329.908 255.908 329.908 255.908L288.743 447.039C288.743 447.039 288.743 454.286 272.911 467.874C257.078 481.461 247.579 477.838 247.579 477.838H75.797L31.4662 534L10.0924 264.966C10.0924 264.966 10.6267 255.248 16.2968 242.896C21.9668 230.544 35.437 223.914 35.437 223.914Z" fill="#28F300" stroke="#F9F9F9" stroke-width="2"/>
+<foreignobject id="saludosEditor1" x="10.09" y="225" width="300" height="250" rx="5.5" >
+   <textarea name="saludosEditor1" v-model="saludos" v-on:keydown.shift.s.prevent="mandarSaludos()" ></textarea>
+    </foreignobject>
+  
+<!--   <foreignobject id="saludosEditor1" x="10.09" y="500" width="300" height="250" rx="5.5" >
+  <p>
+    {{output}}
+    </p>
+    </foreignobject> -->
+  
+<!--  Publicar Saludos  -->
+<g id="publicarSaludosCheckbox" fill="transparent">
+<rect  x="215.432" y="484.5" width="56" height="32" rx="5.5" stroke="#FAFAFA" stroke-linejoin="bevel" shape-rendering="crispEdges"/>
+  
+  <foreignObject x="216" y="490" width="50" height="50">
+<span class="material-symbols-outlined iconsSaldudos">publish</span>
+    </foreignObject>
+  
+  <foreignObject x="240" y="487" width="27.1541" height="24.9839" rx="5"> 
+  <input type="checkbox" id="publishCheckbox" v-model="publish">
+  </foreignObject>
+  
+</g>
+  
+<!--  Seleccionar voz  -->
+<g id="seleccionarVoz" fill="transparent">
+<rect x="144.466" y="484.5" width="56" height="32" rx="5.5" stroke="#FAFAFA" stroke-linejoin="bevel" shape-rendering="crispEdges"/>
+
+<foreignObject x="146" y="490" width="20" height="20" rx="5.5">
+  <span class="material-symbols-outlined iconsSaldudos">graphic_eq</span>
+  </foreignObject>
+  
+  <foreignObject x="175" y="490" width="20" height="20" rx="5.5">
+    <select v-model="selectedVoice" class="custom-select">
+      <option v-for="voice in spanishVoices" :key="voice.name" :value="voice">
+        {{ voice.name }}
+      </option>
+    </select>
+    </foreignObject>
+  </g>
+  
+<!-- Boton enviar saludos   -->
+  
+<g id="botonEnviarSaludo"  fill="transparent" @click="mandarSaludos()">
+<rect x="75.5" y="484.5" width="56" height="32" rx="5.5" stroke="#FAFAFA" stroke-linejoin="bevel" shape-rendering="crispEdges"/>
+  
+    <foreignObject x="93" y="490" width="54" height="30" rx="5.5">
+<span class="material-symbols-outlined iconsSaldudos">forward_to_inbox</span>
+  </foreignObject>
+</g>
+
+</g>
+  </g>
+  
+  
+<!-- panel derecho   -->
+<g id="panelDerecho">
+<g id="console">
+<rect id="consoleRect" v-bind:x="consoleXpos"  y="536.918" width="1023.96" height="130.582" rx="4.5" stroke="black"/>
+  <foreignobject  v-bind:x="consoleXpos" y="516.5" width="1023.96" height="151" rx="4.5">
+  <p id="errorConsole" v-text="errorConsole"></p>
+  </foreignobject>
+</g>
+  
+  
+  <g id="barraHorizontalPanelDerecho">
+<rect id="barraHorizontalNuevoDocumento" x="343.5" y="135.379" width="1023.94" height="64.0886" rx="4.5" stroke="black"/>
+
+    <g id="menuNuevoDoc">
+<g id="plusSign" @click="agregaUnDocADocs()">
+<rect v-bind:x="initXPlusSsign" y="135.344" width="62.5962" height="64.0886" rx="4.5" stroke="black"/>
+ <foreignObject  v-bind:x="initXPlusSsign" y="135.344" width="62.5962" height="64.0886" rx="4.5">
+  <p> + </p>  
+  </foreignObject>
+  
+</g>
+</g>
+<g id="newDoc" v-for="(doc, index) in docs" :key="index" >
+<rect v-bind:x="doc.xDocTab" y="135.347" width="168.017" height="64.0886" rx="4.5" stroke="black"/>
+  
+  <foreignobject  v-bind:x="doc.xDocTab" y="135.347" width="168.017" height="64.0886" rx="4.5" >
+  <input :name="doc.name" 
+         :ref="'tab' + index" 
+         :class="['tituloNuevoDoc', {'transparent-caret': transparentCaret, 'yellow-caret': yellowCaret}]"    
+         @click.stop.prevent="activarDocumento(index); textEditorFocus(index); " 
+         @dblclick.stop.prevent="tabFocus('tab' + index)"
+         type="text"
+         v-bind:placeholder="doc.name" 
+         />    
+   </foreignobject> 
+  
+  
+  
+  <g id="close" v-on:click="cerrarDocumento(index)" >
+    <foreignObject v-bind:x="doc.xCerrarDocIcono" y="125" width="20" height="40" rx="4.5" >
+  <p id="closeSign"> x </p>  
+  </foreignObject>
+  </g>
+
+
+   
+<g id="codeArea">
+
+<rect id="panelDerecho_2" v-bind:x="codeEditorImagenDeFondoXpos" y="200.828" width="1020.61" height="337.76" fill="url(#pattern0_1_2)" stroke="black" stroke-width="4.34896"/>
+<rect class="editorOverlay" v-bind:x="codeEditorXpos" y="199.5" width="1024" height="336" rx="4.5" stroke="black" />
+  
+  <foreignobject class="editorDeTexto"  v-show="doc.documentoActivo" v-bind:x="codeEditorXpos" y="199.5" width="1024" height="336" rx="4.5" >     
+     <textarea :name="doc.textareaId" 
+               :ref="('editorTextArea' + index)" 
+               :style="{ fontSize: textSize}"
+               v-model="doc.textEditor" 
+               @input="convertInput"
+               @keydown.shift.enter.prevent="evaluate"
+               @keydown.ctrl="stopShortCut($event); incrementarTamanoDeTextoShortCut($event); reducirTamanoDeTextoShortCut()" 
+               ></textarea>
+      </foreignobject>
+    
+</g>
+  </g>
+  </g>
+
+  
+  
+<!-- menu panel Derecho  -->
+<g id="menuPanelDerecho">
+<g id="opcionesMenuPanelDerecho" v-show="mostrarOpcionesMenuPanelDerecho" >
+<rect id="barraMenuPanelDerecho" x="406.507" y="200.432" v-bind:height="anchoDelMenuDerecho" width="466.733" rx="4.5" transform="rotate(90 406.507 200.432)" stroke="black"/>
+
+  
+<!-- Cargar imagen de fondo   -->
+<g id="abrirImagenDeFondo"  > 
+ <g id="abrirImagenDeFondoIcono"  fill="transparent">
+  
+<foreignObject x="350" y="520" width="50" height="50" > 
+  <input type="file" accept="image/*" id="imageInput" @change="cargarImagenDeFondo" @click.ctrl.prevent="removerImagenDeFondo" style="display: none">
+  <label for="imageInput" class="material-symbols-outlined iconos" style="font-size: 3em"> {{imagenDeFondo}} </label>
+</foreignObject>   
+    </g>
+</g>
+  
+<!-- Abrir documento   -->
+<g id="abrirDocumento" fill="transparent"> 
+<g id="abrirDocumentoIcono">
+<foreignObject x="350" y="460" width="50" height="50"> 
+ <input type="file" accept=".txt" id="fileInput" @change="loadFile" style="display: none">
+ <label for="fileInput" class="material-symbols-outlined iconos" style="font-size: 3em"> folder_open </label>
+</foreignObject>
+  </g>
+</g>
+  
+<!-- Descargar documento   -->
+<g id="guardarDocumento" fill="transparent" @click="downloadText"> 
+<g id="guardarDocumentoIcono">
+<foreignObject x="350" y="400" width="50" height="50"> 
+  <span class="material-symbols-outlined iconos" style="font-size: 3em"> save </span>
+  </foreignObject>
+  </g>
+</g>
+  
+<!-- Ajustar tamano de texto   -->
+  
+<g id="ajustarTamanoTexto" fill="transparent" @click.ctrl="reducirTamanoDeTexto()"  @click="incrementarTamanoDeTexto($event)">
+<g id="fontSizeIcon">
+  <foreignObject x="350" y="340" width="50" height="50"> 
+  <span class="material-symbols-outlined iconos" style="font-size: 3em"> {{zoomInOrOut}} </span>
+  </foreignObject>
+  </g>
+</g>
+  
+<!-- Detener/stop -->  
+<g id="stop"  fill="transparent" @click="stop">
+<g id="stopIcon_2">
+<foreignObject x="350" y="280" width="50" height="50"> 
+  <span class="material-symbols-outlined iconos" style="font-size: 3em"> stop_circle </span>
+  </foreignObject>
+</g>
+</g>
+  
+<!-- Tocar/play   -->
+<g id="play" fill="transparent" @click="evaluate">
+<g id="playIcon">
+<g id="playIcon_2">
+<foreignObject x="350" y="220" width="50" height="50"> 
+  <span class="material-symbols-outlined iconos" style="font-size: 3em"> play_circle </span>
+  </foreignObject>
+</g>
+</g>
+</g>
+</g>
+<g id="abrirMenuDerecho" @click="abrirMenuDerecho()" fill="transparent" >
+<rect x="343.5" y="135.344" width="62.6028" height="64.0886" rx="4.5" stroke="black"/>
+<text id="- - -_2" transform="translate(348.002 137.373)" fill="#FAFF00" xml:space="preserve" style="white-space: pre" font-family="Permanent Marker" font-size="40" letter-spacing="0em"><tspan x="14.6123" y="35.8548">-&#10;</tspan><tspan x="14.6123" y="45.8548">-&#10;</tspan><tspan x="14.6123" y="55.8548">-</tspan></text>
+</g>
+</g>
+</g>
+<g id="barraHorizontalSuperior">
+<rect id="barraDeTitulo" x="0.567688" y="0.5" width="1366.87" height="135.053" rx="4.5" stroke="black"/>
+<g id="seis8sTitulo">
+<text id="seis8s" fill="#FAFF00" stroke="black" stroke-width="0" xml:space="preserve" style="white-space: pre" font-family="Galada" font-size="70" letter-spacing="0em"><tspan x="63.4619" y="92.1286">Seis8s</tspan></text>
+</g>
+  
+<g id="banner">
+<path id="bannerShape" d="M555.06 108.017C540.895 102.685 543.861 97.3531 543.861 97.3531M554.707 108.953C558.755 110.477 563.738 111.568 568.8 112.349H420.774L476.081 77.4629L477.422 76.6171L476.081 75.7714L420.774 40.8849H542.861V97.143C542.846 97.1814 542.831 97.2234 542.815 97.269C542.74 97.4895 542.66 97.7948 542.624 98.1727C542.549 98.9386 542.653 99.9653 543.26 101.143C544.458 103.471 547.54 106.255 554.707 108.953ZM544.861 40.8849V39.8849V23.7037H1172.24V39.8849V40.8849V96.3531H1131.68H1130.68H859.877H595.376H594.376H544.861V40.8849ZM1174.24 97.3213V40.8849H1299.57L1242.15 75.7625L1240.74 76.6171L1242.15 77.4718L1299.57 112.349H1153.89C1154.35 112.263 1154.8 112.173 1155.25 112.079C1158.88 111.322 1162.28 110.297 1164.77 108.888C1169.62 106.147 1172.01 103.353 1173.18 101.154C1173.76 100.058 1174.03 99.1246 1174.15 98.4433C1174.21 98.1033 1174.23 97.8277 1174.24 97.6274C1174.24 97.5273 1174.24 97.4461 1174.24 97.3852C1174.24 97.3605 1174.24 97.3392 1174.24 97.3213ZM1131.72 112.339C1131.71 112.339 1131.69 112.34 1131.68 112.34V98.3531H1172.13C1172.02 98.825 1171.81 99.4615 1171.41 100.217C1170.46 102.017 1168.37 104.556 1163.78 107.147C1161.56 108.404 1158.4 109.378 1154.84 110.121C1151.3 110.86 1147.44 111.356 1143.85 111.687C1140.26 112.018 1136.97 112.184 1134.57 112.267C1133.37 112.308 1132.4 112.329 1131.72 112.339ZM544.616 98.3531H594.376V112.341C594.331 112.34 594.285 112.34 594.238 112.339C593.501 112.329 592.43 112.308 591.099 112.267C588.438 112.184 584.744 112.018 580.609 111.686C572.31 111.02 562.353 109.694 555.412 107.081C548.415 104.447 545.898 101.899 545.038 100.228C544.615 99.4065 544.575 98.7669 544.614 98.3664C544.615 98.3619 544.615 98.3575 544.616 98.3531Z" fill="#28F300" stroke="white" stroke-width="2"/>
+
+<!--  Bannertext    -->
+  <foreignobject  x="559.09" y="10" width="594.94" height="91.11" rx="5.5" >
+   <p name="bannerText" id="textoDelBanner" > {{textoDelBanner}}</p>
+ </foreignobject>
+</g>
+  
+<defs>
+<filter id="filter0_i_1_2" x="13.19" y="261.566" width="316.681" height="179.172" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_1_2"/>
+</filter>
+<filter id="filter1_i_1_2" x="13.1854" y="436.738" width="316.681" height="178.388" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_1_2"/>
+</filter>
+<filter id="filter2_d_1_2" x="219.712" y="219.875" width="113.215" height="41.1254" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_2"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_2" result="shape"/>
+</filter>
+<pattern id="pattern0_1_2" patternContentUnits="objectBoundingBox" width="0.200251" height="0.521033">
+<use xlink:href="#imageSrc" transform="scale(0.000243912 0.000730761)"/>
+</pattern>
+<linearGradient id="paint0_linear_1_2" x1="684" y1="0" x2="684" y2="668" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF8A00"/>
+<stop offset="0.33" stop-color="#C94B14"/>
+<stop offset="0.66" stop-color="#930D28"/>
+<stop offset="1" stop-color="#270225"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1_2" x1="478.5" y1="211" x2="478.5" y2="470" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FAFF00"/>
+<stop offset="1" stop-color="#FF5000"/>
+</linearGradient>
+<linearGradient id="paint2_linear_1_2" x1="170" y1="0" x2="170" y2="133.624" gradientUnits="userSpaceOnUse">
+<stop offset="0.340893" stop-color="#FF0CA7"/>
+<stop offset="0.874562" stop-color="#880840"/>
+</linearGradient>
+<clipPath id="clip0_1_2">
+<rect width="1368" height="668" fill="white"/>
+</clipPath>
+<image id="imageSrc" data-name="concha-ascii.png" width="821" height="713" :href="hrefImagenDeFondo"></image>
+
+</defs>
+</svg>
+
+
+  </div>
+    <script type="module" src="vue.js"></script> 
+<!--     <script src="vue.js"></script>  -->
+
+  </body>
+</html>

@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'GaladaModificada';
+    src: url('https://cdn.glitch.global/1c9491c3-d804-48fe-9d1e-06e2c4f58528/Galada-Regular-W-Note-Icons.ttf?v=1726335832603') format('opentype');
+}
+
+
+body { 
+  margin: 0px;
+  padding: 0px;
+  background: black;
+  overflow: hidden; 
+
+}
+
+#app {
+/*   width: 70%; */
+  margin: auto;
+}
+
+svg {
+  fill: none; 
+  
+}
+
+textarea {
+  resize: none;
+  width:100%;
+  height: 100%;
+  padding: 1%;
+  overflow: auto;
+  box-sizing: border-box;
+
+}
+
+.editorDeTexto textarea {
+    font-family: 'GaladaModificada';
+/*       font-family: 'Courier New', Courier, monospace; */
+    background: transparent;
+    caret-color: white;
+    line-height: normal;
+    color: yellow;
+/*     background: linear-gradient(yellow, white); */
+/*     -webkit-background-clip: text; */
+/*             background-clip: text; */
+/*     -webkit-text-fill-color: transparent; */
+}
+
+
+.editorOverlay {
+  fill: black;
+  fill-opacity:0.3;
+}
+
+
+
+.textoAcercaDe {
+  color: #FAFF00;
+  font-family:'Permanent Marker';
+  padding: 3%;
+  background: transparent;
+  overflow: auto;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+/* SALUDOS  */
+#saludosEditor1 textarea, #saludosEditor2 textarea {
+  text-align: center;
+  background: transparent;
+  color: white;
+  caret-color: black;
+  text-shadow: 0 0 3px black, 0 0 5px black;
+  font-size: 2em;
+  border: none;
+  font-family: 'Hanalei Fill';
+  font-size: 150%;
+}
+
+#saludosEditor1 textarea:focus {
+    border: 0 none #FFF;
+    overflow: hidden;
+    outline:none;
+}
+
+input[type="checkbox"] {
+  width: 100%;  /* Set the width to 30px */
+  height: 100%; /* Set the height to 30px */
+}
+
+
+
+.custom-select {
+  color: white;
+  width: 100%;  /* Set the width of the dropdown */
+  height: 100%;  /* Set the height of the dropdown */
+  border: 1px solid white;  /* Set the border color and width */
+  font-size: 100%;  /* Set the font size */
+  background-color: transparent;  /* Set the background color */
+  font-family: 'Hanalei Fill';
+}
+
+.custom-select option {
+  color: black; 
+}
+
+
+/* BANNER */
+@keyframes marquee {
+  0%   { transform: translateX(80%); }
+  100% { transform: translateX(-80%); }
+}
+
+#textoDelBanner {
+  width:100%;
+  height:100%;
+  overflow: auto;
+  box-sizing: border-box;
+  text-align: center;
+  background: transparent;
+  color: white;
+  text-shadow: 0 0 3px black, 0 0 5px black;
+  font-size: 2em;
+  border: none;
+  font-family: 'Hanalei Fill';
+  display: inline-block;
+  text-wrap: nowrap;
+  position: relative;
+  animation: marquee 20s linear infinite;
+}
+
+
+/* p[name="bannerText"] {
+  display: inline-block;
+  position: relative;
+  animation: marquee 5s linear infinite;
+}
+ */
+
+
+#errorConsole  {
+  color: white;
+  width:100%;
+  height: 100%;
+  padding: 1%;
+  background: transparent;
+  overflow: auto;
+  font-family:'Permanent Marker';
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+
+
+#close {
+    font-family:'Permanent Marker';
+    fill: yellow;
+}
+
+
+#abrirMenuIzquierdo, #abrirMenuDerecho, #acercaDe, #midi, #info, #play, #stop, #fontSizeIcon, #abrirDocumento, #test, #guardarDocumento, #abrirImagenDeFondo, #menuNuevoDoc, #botonEnviarSaludo, #closeSign, .tituloNuevoDoc {
+  cursor:pointer;
+}
+
+
+.tituloNuevoDoc {
+  background: transparent;
+  font-family: 'Permanent Marker';
+  width: 80%;
+  height: 100%;
+  border: none;
+  color: yellow;
+}
+ 
+.transparent-caret {
+  caret-color: transparent;
+}
+
+
+.yellow-caret {
+    caret-color: yellow;
+}
+
+
+#plusSign, #closeSign {
+  width: 100%;
+  text-align: center;
+  font-family: 'Permanent Marker';
+  color: yellow;
+  font-size: 1em;
+  
+}
+
+
+.iconos {
+   color: #FAFF00;
+   cursor:pointer;
+ 
+}
+
+ a {
+  color: white;
+}
+
+.iconsSaldudos {
+   color: white;
+   cursor:pointer;
+}
+
+
+
